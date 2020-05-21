@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Biglietto|Treno|Form</title>
+  </head>
+  <body>
+    <!-- Form Dati -->
+    <div class="wrapper">
+      <div class="form-dati">
+
+        <div class="nome-cognome">
+          <label>Nome Cognome</label>
+          <input id="form-nome-cognome" type="text">
+        </div>
+
+        <div class="kilometri">
+          <label>Km da percorrere</label>
+          <input id="form-kilometri" type="text">
+        </div>
+
+        <div class="fascia-eta">
+          <label>Fascia di età</label>
+          <select id="form-fascia-eta">
+            <option value="Maggiorenne">Maggiorenne</option>
+            <option value="Over 65">Over 65</option>
+            <option value="Minorenne">Minorenne</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="button">
+        <button id="button-genera">Genera</button>
+        <button id="button-annulla">Annulla</button>
+      </div>
+
+    </div>
+    <!-- End Form Dati -->
+
+    <hr>
+
+    <!-- Biglietto -->
+    <div class="biglietto">
+      <h3>DETTAGLIO PASSEGGERI</h3>
+      <p>NOME PASSAGGERO <span id="bigl-nome-cognome"></span></p>
+      <p>Offerta <span id="bigl-offerta"></span></p>
+      <p>Carrozza <span id="bigl-carrozza"></span></p>
+      <p>Codice CP <span id="bigl-codice-cp"></span></p>
+      <p>Costo biglietto <span id="bigl-costo-biglietto"></span></p>
+
+
+    </div>
+    <!-- End Biglietto -->
+
+    <script type="text/javascript" src="js/script.js">
+
+    </script>
+
+  </body>
+</html>
