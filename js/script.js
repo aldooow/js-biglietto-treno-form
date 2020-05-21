@@ -14,9 +14,15 @@ var biglOfferta = document.getElementById('bigl-offerta');
 var biglCarrozza = document.getElementById('bigl-carrozza');
 var biglCodiceCp = document.getElementById('bigl-codice-cp');
 
+var finestraVisible = document.getElementById('biglietto');
+
+
+
 // Click-Genera!!!
 buttonGenera.addEventListener('click',
   function () {
+    finestraVisible.className = 'visible';
+
     biglNomeCognome.innerHTML = formNomeCognome.value;
     biglOfferta.innerHTML = 'Prezzo Intero'
     biglCarrozza.innerHTML = ((Math.random()) * 100).toFixed(0);
@@ -29,23 +35,23 @@ buttonGenera.addEventListener('click',
       biglCostoBiglietto.innerHTML = 0.21 * formKilometri.value * 60 / 100;
       biglOfferta.innerHTML = 'Prezzo Ridotto Over 65'
     }
-
-
   }
 );
 
 // Click-Annulla!!!
 buttonAnnulla.addEventListener('click',
   function () {
-    biglNomeCognome.innerHTML = '';
+
+    finestraVisible.className = 'hidden';
+
     formNomeCognome.value = '';
-
-    biglCostoBiglietto.innerHTML = '';
     formKilometri.value = '';
-
     formFasciaEta.value = 'Maggiorenne';
 
-
-
+    biglNomeCognome.innerHTML = '';
+    biglOfferta.innerHTML = '';
+    biglCarrozza.innerHTML = '';
+    biglCodiceCp.innerHTML = '';
+    biglCostoBiglietto.innerHTML = '';
   }
 )

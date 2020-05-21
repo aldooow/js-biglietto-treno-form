@@ -1,0 +1,7 @@
+.hidden {
+  background: red;
+  display: none;
+}
+.visible {
+  background: lightgreen;
+}
