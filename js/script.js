@@ -17,13 +17,16 @@ var biglCarrozza = document.getElementById('bigl-carrozza');
 var biglCodiceCp = document.getElementById('bigl-codice-cp');
 
 // Variante del Biglietto
-var finestraVisible = document.getElementById('biglietto');
+var bigliettoVisible = document.getElementById('biglietto');
+var titoloVisible = document.getElementById('titolo');
+
 
 // Click-Genera!!!
 buttonGenera.addEventListener('click',
   function () {
     // Far apparire il Biglietto quando si fa click in "Genera"!!!!
-    finestraVisible.className ='wrapper';
+    bigliettoVisible.className ='wrapper';
+    titoloVisible.className = '';
     // Nome stampato sul Biglietto!!!
     biglNomeCognome.innerHTML = formNomeCognome.value;
     // Offerta stampata sul Biglietto!!!
@@ -52,7 +55,8 @@ buttonAnnulla.addEventListener('click',
   function () {
 
     // Far Nascondere il Biglietto quando si fa click in "Annulla"!!!!
-    finestraVisible.className = 'hidden';
+    bigliettoVisible.className ='hidden';
+    titoloVisible.className = 'hidden';
 
     formNomeCognome.value = '';
     formKilometri.value = '';

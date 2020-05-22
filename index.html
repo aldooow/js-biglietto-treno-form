@@ -12,17 +12,17 @@
     <div class="wrapper">
       <div class="form-dati">
 
-        <div class="nome-cognome">
-          <label>Nome Cognome</label>
-          <input id="form-nome-cognome" type="text">
+        <div class="wrapper-form nome-cognome">
+          <label >Nome Cognome</label>
+          <input id="form-nome-cognome" type="text" placeholder="Nome e Cognome">
         </div>
 
-        <div class="kilometri">
+        <div class="wrapper-form kilometri">
           <label>Km da percorrere</label>
-          <input id="form-kilometri" type="text">
+          <input id="form-kilometri" type="text" placeholder="Km da percorre">
         </div>
 
-        <div class="fascia-eta">
+        <div class="wrapper-form fascia-eta">
           <label>Fascia di età</label>
           <select id="form-fascia-eta">
             <option value="Maggiorenne">Maggiorenne</option>
@@ -34,16 +34,16 @@
       </div>
 
       <div class="button">
-        <button id="button-genera">Genera</button>
-        <button id="button-annulla">Annulla</button>
+        <button id="button-genera" class="wrapper-button"><b>Genera</b></button>
+        <button id="button-annulla" class="wrapper-button"><b>Annulla</b></button>
       </div>
 
     </div>
     <!-- End Form Dati -->
 
     <!-- Biglietto -->
-    <h2>IL TUO BIGLIETTO</h2>
-    <div div id="biglietto" class=" wrapper hidden">
+    <h2 id="titolo" class="hidden">IL TUO BIGLIETTO</h2>
+    <div id="biglietto" class=" wrapper hidden">
       <div class="stampa-biglietto">
 
         <div class="corpo-biglietto">
