@@ -1,3 +1,5 @@
+
+// Buttons!!!!
 var buttonGenera = document.getElementById('button-genera');
 var buttonAnnulla = document.getElementById('button-annulla');
 
@@ -14,15 +16,14 @@ var biglOfferta = document.getElementById('bigl-offerta');
 var biglCarrozza = document.getElementById('bigl-carrozza');
 var biglCodiceCp = document.getElementById('bigl-codice-cp');
 
+// Variante del Biglietto
 var finestraVisible = document.getElementById('biglietto');
-
-
 
 // Click-Genera!!!
 buttonGenera.addEventListener('click',
   function () {
     // Far apparire il Biglietto quando si fa click in "Genera"!!!!
-    finestraVisible.className = 'visible';
+    finestraVisible.className ='wrapper';
     // Nome stampato sul Biglietto!!!
     biglNomeCognome.innerHTML = formNomeCognome.value;
     // Offerta stampata sul Biglietto!!!
@@ -39,7 +40,7 @@ buttonGenera.addEventListener('click',
       biglCostoBiglietto.innerHTML = '€' + (0.21 * formKilometri.value * 80 / 100).toFixed(2);
       biglOfferta.innerHTML = 'Prezzo Ridotto Minorenne';
     } else if (formFasciaEta.value == 'Over 65'){
-      // Sconto Over65!!
+      // Sconto Over 65!!
       biglCostoBiglietto.innerHTML = '€' + (0.21 * formKilometri.value * 60 / 100).toFixed(2);
       biglOfferta.innerHTML = 'Prezzo Ridotto Over 65'
     }
