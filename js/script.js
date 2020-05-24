@@ -31,6 +31,7 @@ buttonGenera.addEventListener('click',
 
     //FAR APPARIRE IL TICKET!!
     hiddenTicket.className = 'ticket-printed';
+    hiddenError.className = 'error-wrapper hidden';
 
     // Stampare il nome sul ticket!!
     ticketNome.innerHTML = formNome.value;
