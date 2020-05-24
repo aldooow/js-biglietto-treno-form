@@ -4,94 +4,125 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* END RESET */
+
+/* General Settings */
 body {
-  background-color: #ba1450;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: 'Roboto', sans-serif;
-}
-span {
-  color: #656766;
+  background-color: #ba1450;
 }
 h2 {
-  color: #ffff;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0;
 }
-/* END RESET */
+/* END General Settings */
 .hidden {
   display: none;
 }
 
 .wrapper {
-  border-radius: 10px;
-  padding: 20px 50px;
-  text-align: center;
   width: 80%;
-  background: white;
-  box-shadow: 13px 17px 9px -10px rgba(0,0,0,0.36);
-  margin-bottom: 50px;
+  margin: 0 auto;
 }
-/* Form Biglietto */
-input,
-select {
-  border: 1px solid #c04069;
+.wrapper div[class*="-wrapper"] {
+  background-color: #ffff;
+  width: 100%;
   border-radius: 5px;
-  height: 20px;
-}
-input[type="text"] {
   text-align: center;
+  padding: 25px 25px;
+  box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+}
+
+/* Panel form ticket  */
+
+.wrapper .form-data > div[class*="form"] {
+  display: inline-block;
+  margin: 0 25px;
+}
+.wrapper .ticket-form .form-wrapper .form-button {
+  margin-top: 50px;
 }
 label {
-  font-size: 12px;
-  color: #c04069;
   display: block;
+  color: #ba1450;
+  margin-bottom: 10px;
 }
-.wrapper-form {
-  padding: 0 30px;
-}
-.form-dati {
-  justify-content: center;
-  display: flex;
-}
-
-.wrapper-button {
-  padding: 5px;
+input,
+select {
+  border: 1px solid #ba1450;
   border-radius: 5px;
-  margin: 0 5px;
-  margin-top: 50px;
-  background: #cecece;
-  border: 1px solid #b4b4b4;
-  color: #c04069;
+  height: 20px;
+  text-align: center;
 }
-.wrapper-button:focus {
-  background-color: #8b8b8b;
+input::placeholder {
+  text-align: center;
+}
+button {
+  font-size: 15px;
+  color: #ba1450;
+  background-color: #d2d2d2;
+  margin: 0 10px;
+  padding: 5px;
+  border: 1px solid #8b8b8b;
+  border-radius: 5px;
+}
+button:focus {
   color: #ffff;
+  background-color: #8b8b8b;
+  border: 1px solid #7d8086;
 }
 
-/* Biglietto */
-.stampa-biglietto {
+  /* media query */
+@media screen and (max-width: 768px) {
+  .wrapper .form-data > div[class*="form"] {
+    display: block;
+    margin-bottom: 20px;
+  }
 
-  max-width: 700px;
-  background-color: #ea6c55;
-  border-radius: 15px;
-  border: 3px solid black;
 }
-.corpo-biglietto {
-  display: flex;
-  margin: 50px 0;
-  padding: 50px 150px 10px 50px;
-  background: #eaf3d9;
-}
-.img-qr img {
-  width: 80%;
-}
-.dati-biglietto {
+  /* END media query */
+/* END Panel form ticket  */
+
+/* Panel printed ticket */
+.wrapper .ticket-printed .ticket-wrapper {
   text-align: left;
 }
-#bigl-nome-cognome {
-  text-transform: capitalize;
+.wrapper .ticket-printed .ticket-data {
+  display: flex;
+  border: 1px solid #000000;
 }
-.img-qr {
-  width: 100px;
-  height: 100px;
+.wrapper .ticket-printed .ticket-data > div[class*="ticket"] {
+  padding: 25px;
 }
+.wrapper .ticket-printed .ticket-data > div[class*="ticket"] h5 {
+  padding-bottom: 50px;
+}
+.wrapper .ticket-printed .ticket-data .ticket-nome {
+  width: 300px;
+  background-color: #8b8b8b;
+}
+#js_ticket-nome {
+  text-transform: uppercase;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+  .wrapper .ticket-printed .ticket-data {
+    flex-wrap: wrap;
+
+  }
+  .wrapper .ticket-printed .ticket-data .ticket-nome,
+  .wrapper .ticket-printed .ticket-data .ticket-offerta {
+    width: 50%;
+    background-color: #8b8b8b;
+  }
+  .wrapper .ticket-printed .ticket-data .ticket-carrozza,
+  .wrapper .ticket-printed .ticket-data .ticket-codice,
+  .wrapper .ticket-printed .ticket-data .ticket-costo {
+    width: calc(100%/3);
+  }
+}
+/* END media query */
+
+/* END Panel printed ticket */
